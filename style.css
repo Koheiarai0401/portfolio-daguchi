@@ -172,11 +172,12 @@ summary {
 .message-theme {
   display: flex;
   padding-top: 50px;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .message-theme img{
-  width: 200;
+  width: 500px;
   height: 300px;
   object-fit: cover;
   margin-right: 30px;
@@ -184,7 +185,49 @@ summary {
 .message-theme h4{
   font-size: 30px;
   font-weight: bold;
-  margin-left: 30px;
+  margin-left: 100px;
+}
+.message-content {
+  width: 80%;
+  margin-top: 30px;
+  margin-left: 100px;
+}
+
+.message-content p{
+  line-height: 3;
+  font-size: 20px;
+}
+
+.message-content span{
+  font-size: 30px;
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+.logo {
+  display: flex;
+}
+
+.message-content ul {
+  border-left: 2px solid #222;
+}
+
+.message-content li {
+  line-height: 2;
+  font-size: 20px;
+  padding-left: 30px;
+}
+
+.message-content img {
+  width: 50%;
+  object-fit: cover;
+  margin-left: 100px;
+  object-fit: contain;
+}
+.message-content h5{
+  font-size: 24px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: right;
 }
 
 button {
