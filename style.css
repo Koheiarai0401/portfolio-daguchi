@@ -121,7 +121,6 @@ header li{
 .nav-menu li {
   list-style: none;
   margin: 0 15px;
-  z-index: 1;
 }
 
 #shadow {
@@ -380,14 +379,14 @@ footer p{
   }
 
   .nav-menu {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      background-color: #333;
-      padding: 20px;
-      border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
   }
 
   .nav-menu li {
