@@ -18,9 +18,6 @@ hr { display: none; }
 em{font-style: normal}
 input{line-height:auto;vertical-align:middle;}
 strong.more{color:#c30}a{text-decoration: none;}
-body {
-	font-family: ;
-}
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -36,7 +33,8 @@ body {
     --color-white: #fbfbfb;
     --color-text: #2B373C;
     color: var(--color-text);
-  }
+}
+
 header {
   width: 100%;
     padding: 40px 4% 10px;
@@ -69,6 +67,69 @@ header li{
 
 .nav {
   text-align: right;
+}
+
+#hamburger-menu {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  margin-left: auto;
+}
+
+#hamburger-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.hidden-checkbox {
+  display: none;
+}
+
+.hidden-checkbox:checked ~ .nav-menu {
+  display: block;
+}
+
+.hidden-checkbox:checked ~ #hamburger-menu span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hidden-checkbox:checked ~ #hamburger-menu span:nth-child(2) {
+  opacity: 0;
+}
+
+.hidden-checkbox:checked ~ #hamburger-menu span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-menu li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+#shadow {
+  display: none;
+}
+
+.hidden-checkbox:checked ~ #shadow {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .top-view img{
@@ -111,6 +172,7 @@ h1 {
 }
 .feeling-message {
   display: flex;
+  flex-wrap: wrap;
 }
 .feeling-message h2{
   font-size: 70px;
@@ -206,6 +268,7 @@ summary {
 
 .logo {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .message-content ul {
@@ -228,6 +291,7 @@ summary {
   font-size: 24px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: right;
+  font-weight: bold;
 }
 
 button {
@@ -298,6 +362,7 @@ button {
   .buttonOutlineGradient:hover::before {
     opacity: 1;
   }
+}
 footer {
   height: 100px;
 }
@@ -305,4 +370,57 @@ footer {
 footer p{
   text-align: center;
   padding-top: 60px;
+}
+@media (max-width: 650px) {
+  #hamburger-menu {
+      display: flex;
+  }
+
+  .nav-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: #333;
+      padding: 20px;
+      border-radius: 5px;
+  }
+
+  .nav-menu li {
+      margin: 10px 0;
+  }
+  .top-view h2{
+    position: absolute;
+    color: var(--color-white);
+    font-size: 45px;
+    font-weight: bold;
+    top: 60%;
+    right: 10%;
+  }
+  .top-view p{
+    position: absolute;
+    color: var(--color-white);
+    font-size: 12px;
+    top: 70%;
+    right: 10%;
+  }
+  .feeling-box {
+    display: flex;
+    padding: 150px 0 150px 0;
+    display: flex;
+    justify-content: center;
+  }
+  .feeling-message {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .feeling-message h2{
+    font-size: 70px;
+    font-weight: bold;
+    padding-right: 200px;
+  }
+  .feeling-message p{
+    font-size: 35px;
+  }
 }
