@@ -35,15 +35,19 @@ strong.more{color:#c30}a{text-decoration: none;}
     color: var(--color-text);
 }
 
+body {
+  width: 100%;
+}
+
 header {
   width: 100%;
-    padding: 40px 4% 10px;
-    background-color: var(--color-main);
-    position: fixed;
-    top: 0;
-    display: flex;
-    align-items: center;
-    z-index: 1;
+  padding: 30px 4% 10px;
+  background-color: var(--color-main);
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  z-index: 1;
 }
 
 header p {
@@ -117,6 +121,7 @@ header li{
 .nav-menu li {
   list-style: none;
   margin: 0 15px;
+  z-index: 1;
 }
 
 #shadow {
@@ -160,7 +165,7 @@ h1 {
   position: absolute;
   color: var(--color-white);
   font-size: 12px;
-  top: 56%;
+  top: 58%;
   right: 10%;
 }
 
@@ -177,7 +182,7 @@ h1 {
 .feeling-message h2{
   font-size: 70px;
   font-weight: bold;
-  padding-right: 200px;
+  padding-right: 100px;
 }
 .feeling-message p{
   font-size: 35px;
@@ -186,11 +191,11 @@ h1 {
 .base-card {
   background-color: var(--color-main);
   color: white;
-  padding: 100px 0 100px 0;
+  padding: 80px 0 80px 0;
 }
 
 .head-3 {
-  margin-left: 100px;
+  margin-left: 5%;
 }
 
 h3 {
@@ -228,31 +233,29 @@ summary {
   object-fit: cover;
 }
 .base-card-white {
-  padding: 100px 0 100px 0;
+  padding: 80px 0 80px 0;
 }
 
 .message-theme {
   display: flex;
-  padding-top: 50px;
-  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
 .message-theme img{
-  width: 500px;
-  height: 300px;
+  height: 250px;
   object-fit: cover;
-  margin-right: 30px;
+  margin-left: 10%;
 }
 .message-theme h4{
   font-size: 30px;
   font-weight: bold;
-  margin-left: 100px;
+  margin-left: 10%;
+  padding-top: 80px;
 }
 .message-content {
   width: 80%;
   margin-top: 30px;
-  margin-left: 100px;
+  margin-left: 10%;
 }
 
 .message-content p{
@@ -388,7 +391,7 @@ footer p{
   }
 
   .nav-menu li {
-      margin: 10px 0;
+    margin: 10px 0;
   }
   .top-view h2{
     position: absolute;
@@ -414,13 +417,19 @@ footer p{
   .feeling-message {
     display: flex;
     flex-wrap: wrap;
+    margin-left: 10%;
   }
   .feeling-message h2{
-    font-size: 70px;
+    font-size: 50px;
     font-weight: bold;
-    padding-right: 200px;
   }
   .feeling-message p{
-    font-size: 35px;
+    font-size: 30px;
+  }
+  .base-card {
+    margin: 50px 0 100px 0;
+  }
+  .base-card-white {
+    padding: 50px 0 100px 0;
   }
 }
